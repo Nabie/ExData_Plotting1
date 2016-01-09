@@ -32,5 +32,4 @@ png("./ExData_Plotting1/plot2.png", width = 480, height = 480)
 with(energy, plot(datetime, Global_active_power, type = "l",
                   xlab = "", ylab = "Global Active Power (kilowatts)"))
 
-#lines(Global_active_power~DateTime)
 dev.off()

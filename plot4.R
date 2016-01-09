@@ -10,7 +10,7 @@ unzip("./Graph/household_power_consumption.zip",
 
 # loading sqlf
 library(sqldf)
-#library(tcltk)
+
 
 # readind only data  from the dates 2007-02-01 and 2007-02-02
 energy <- read.csv.sql("./Graph/household_power_consumption.txt",
@@ -40,7 +40,6 @@ with(energy, {
        xlab = "", ylab = "Energie sub metering")
   lines(datetime, Sub_metering_2, type = "l", col = "red")
   lines(datetime, Sub_metering_3, type = "l", col = "blue")
-  #title(xlab = "", ylab = "Energie sub metering")
   legend("topright", lty = 1, col = c("black", "red", "blue"),
          legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 })
